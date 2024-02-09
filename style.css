@@ -1,0 +1,83 @@
+body {
+    font-family: "IBM Plex Sans", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+    display: flex;
+    margin: 20px;
+}
+.guide {
+    flex: 2;
+    padding: 50px;
+    position: relative;
+}
+.app {
+    flex: 2;
+    position: relative;
+    border: 2px dashed #F3153C;
+}
+#yoursaas {
+    position: absolute;
+    right: 3px;
+    top: 10px;
+    width: 150px;
+}
+#github-link img {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    width: 30px;
+}
+.guide p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 80%;
+}
+.guide p.small {
+    font-size: 14px;
+    color: #666;
+}
+.guide p b {
+    color: #007bff;
+}
+input, select, textarea {
+	  display: block;
+	  box-sizing: border-box;
+	  width: 100%;
+	  border-radius: 0;
+}
+.app-event-form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 2px 8px 14px gray;
+}
+.app-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.app-event-form input,
+.app-event-form textarea {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+}
+.app-event-form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.app-event-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+#appmixer-integrations-marketplace {
+    position: absolute;
+    inset: 0;
+}
+.am-integrations {
+    padding: 50px;
+}
