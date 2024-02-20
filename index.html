@@ -62,7 +62,10 @@
      }
 
      // The Appmixer SDK is located at https://my.YOUR_TENANT.appmixer.cloud/appmixer/appmixer.js.
-     const APPMIXER_STUDIO_URL = (new URLSearchParams(window.location.search)).get('studioUrl');
+     let APPMIXER_STUDIO_URL = (new URLSearchParams(window.location.search)).get('studioUrl');
+     if (!APPMIXER_STUDIO_URL) {
+         APPMIXER_STUDIO_URL = prompt('Please provide your Appmixer Studio URL (https://my.YOUR_TENANT.appmixer.cloud).');
+     }
 
      loadScript(APPMIXER_STUDIO_URL + '/appmixer/appmixer.js', () => {
          loadScript('./main.js');
