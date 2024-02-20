@@ -1,7 +1,10 @@
 const QUERY_PARAMS = new URLSearchParams(window.location.search);
 
 // This should have the pattern https://api.YOUR_TENANT.appmixer.cloud';
-const APPMIXER_API_URL = QUERY_PARAMS.get('apiUrl');
+let APPMIXER_API_URL = QUERY_PARAMS.get('apiUrl');
+if (!APPMIXER_API_URL) {
+    APPMIXER_API_URL = prompt('Please provide your Appmixer API URL (https://api.YOUR_TENANT.appmixer.cloud).');
+}
 
 let APPMIXER_VIRTUAL_USER_USERNAME = QUERY_PARAMS.get('username');
 let APPMIXER_VIRTUAL_USER_TOKEN;
