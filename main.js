@@ -71,11 +71,10 @@ function createWidgets() {
             customFilter: [{
                 // Show only integration templates shared with users in this demo app.
                 ...(DOMAIN_FILTER && { 'sharedWith.0.domain': DOMAIN_FILTER }),
-                type: 'integration'
+                type: 'integration-template'
             }, {
                 userId: appmixer.get('user').id,
-                templateId: '>0'
-                //type: 'integration-instance'  // Uncomment and remove line above once v6 is released.
+                type: 'integration-instance'
             }]
         }
     });
