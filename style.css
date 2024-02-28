@@ -6,7 +6,7 @@ body {
     margin: 20px;
 }
 .guide {
-    flex: 2;
+    flex: 1;
     padding: 50px;
     position: relative;
 }
@@ -74,10 +74,4 @@ input, select, textarea {
 .app-event-form input[type="submit"]:hover {
     background-color: #0056b3;
 }
-#appmixer-integrations-marketplace {
-    position: absolute;
-    inset: 0;
-}
-.am-integrations {
-    padding: 50px;
-}
+

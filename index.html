@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Appmixer Embed Integrations Demo</title>
+    <title>Appmixer Embed Designer Demo</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
@@ -11,44 +11,23 @@
         <div class="guide">
             <img id="yoursaas" src="./assets/yoursaas.svg" />
 
-            <h1>Appmixer Embedded Integrations Demo</h1>
-            <p>This demo shows you how to embed Appmixer Integrations in your own web application.</p>
+            <h1>Appmixer Embedded Designer Demo</h1>
+            <p>This demo shows you how to embed the Appmixer Designer in your own web application.</p>
 
-            <h2>1. Try the Appmixer Integrations UI</h2>
-            <p>The Appmixer Integrations UI allows end-users of your application to browse and activate integrations that you pre-built for them in the Appmixer Studio.</p>
-            <p><b>Try it yourself and activate an integration by clicking on the integration tile and configuring the integration.</b></p>
-            </p>
-            <p class="small">Note that this integration will run in the context of an Appmixer virtual user that was created for you in the background when you opened this page.</p>
-            <p class="small">The Integration marketplace is rendered in the page natively, using the Appmixer JavaScript SDK. It is not included in an iframe.</p>
+            <h2>Try it yourself</h2>
+            <p>Try to create and start a new automation just as your end-user would.</p>
 
-            <h2>2. Trigger the integration by sending an App Event</h2>
-            <p>Once you have activated an integration, you can trigger it by sending an App Event to Appmixer (assuming your integration starts with the <code>OnAppEvent</code> trigger). This is normally done using the Appmixer JavaScript SDK or an HTTP request:</p>
-<pre>
-    <code>
-        appmixer.api.sendAppEvent('contact-created', { first: 'David', last: 'Doe' });
-    </code>
-    or:
-    <code>
-        curl -XPOST \
-           -H 'Content-Type: application/json' \
-           -H "Authorization: Bearer VIRTUAL_USER_ACCESS_TOKEN" \
-           -d '{ "first": "David", "last": "Doe" }' \
-           "https://APPMIXER_TENANT_API_URL/plugins/appmixer/utils/appevents/events/contact-created"
-    </code>
-</pre>
-    <p><b>In this demo, you can send an App Event using the helper form below. This is to simulate a real-world scenario where you would send an App Event from your own application code.</b></p>
+            <p>Both the Flow Manager and the Designer can be customized to match your branding and you can also build your own custom connectors and utilities to let
+            your end-users fully automate your and other connected apps.</p>
 
-    <form class="app-event-form">
-        <label>App Event name</label><input class="app-event-event" type="text" value="contact-created" placeholder="contact-created" />
-        <label>App Event data (JSON)</label><textarea class="app-event-data" placeholder="JSON data">{ "first": "David", "last": "Doe" }</textarea>
-        <input type="submit" value="Send App Event" />
-    </form>
+            <p class="small">Note that this automation will run in the context of an Appmixer virtual user that was created for you in the background when you opened this page.</p>
+            <p class="small">The Designer and Flow Manager is rendered in the page natively, using the Appmixer JavaScript SDK. It is not included in an iframe.</p>
 
-            <a id="github-link" href="https://github.com/clientIO/appmixer-demo-embedded-integrations" target="_blank"><img src="./assets/github-mark.svg" /></a>
+            <a id="github-link" href="https://github.com/clientIO/appmixer-demo-embedded-designer" target="_blank"><img src="./assets/github-mark.svg" /></a>
         </div>
         <div class="app">
-            <div id="appmixer-integrations-marketplace"></div>
-            <div id="appmixer-integrations-logs"></div>
+            <div id="automations-placeholder"></div>
+            <div id="designer-placeholder"></div>
         </div>
     </div>
 
@@ -73,6 +52,4 @@
     </script>
 </body>
 </html>
-
-
 
